@@ -2,9 +2,9 @@
 {
     internal class Program
     {
-        static void Wrt(double cur, double mem)
+        static void Wrt(double cur, double mem) // выод интерфейса
         {
-            string curStr = cur.ToString("G15");
+            string curStr = cur.ToString("G15");// до 15 зн. чтобы поместилось
             string memStr = mem.ToString("G15");
 
             Console.WriteLine("┌────────────────────────────────────────┐");
@@ -22,10 +22,10 @@
 
         static void Clcltr()
         {
-            double cur;
-            double mem = 0.0;
+            double cur; // текущее число
+            double mem = 0.0; // число в памяти
 
-            while (true)
+            while (true) // ввод числа для исключеня ошибок
             {
                 Console.Write(":) Введите число (целое или вещественное): ");
                 if (double.TryParse(Console.ReadLine(), out cur)) break;
